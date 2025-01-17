@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password, please!</title>
+  <script type="text/javascript" src="script.js"> </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Password, please!</h1>
+  <div class="container">
+    <label for="tamanho-senha">Defina o tamanho da senha: <span id="valor-tamanho">12</span></label>
+    <input id="tamanho-senha" type="range" min="10" max="50" value="10" oninput="atualizarTamanhoSenha()">
+    <div class="opcoes">
+      <label><input type="checkbox" id="usar-maiusculas" checked> Incluir letras maiúsculas</label>
+      <label><input type="checkbox" id="usar-minusculas" checked> Incluir letras minúsculas</label>
+      <label><input type="checkbox" id="usar-numeros" checked> Incluir números</label>
+      <label><input type="checkbox" id="usar-simbolos"> Incluir símbolos</label>
+    </div>
+    <button onclick="gerarNovaSenha()">Gerar Senha</button>
+    <p class="senha-gerada" id="senha-gerada"></p>
+    <button onclick="copiarSenha()">Copiar Senha</button>
+  </div>
+
+  <div class="caracteristicas">
+    <h2> <span style="color: white;">Quais são as caracteristicas de uma senha segura?</span> </h2>
+    <div class="caracteristicas-cards">
+      <div class="caracteristicas-card">
+        <img src="https://img.icons8.com/fluency/48/key.png" alt="Ícone de chave">
+        <h3>Longa</h3>
+        <p>Quanto mais longa a senha, mais segura ela é. Senhas devem ter pelo menos 10 caracteres.</p>
+      </div>
+      <div class="caracteristicas-card">
+        <img src="https://img.icons8.com/fluency/48/lock.png" alt="Ícone de cadeado">
+        <h3>Complexa</h3>
+        <p>Uma senha forte é composta por uma combinação de letras, números e símbolos para maior segurança.</p>
+      </div>
+      <div class="caracteristicas-card">
+        <img src="https://img.icons8.com/fluency/48/fingerprint.png" alt="Ícone de impressão digital">
+        <h3>Exclusiva</h3>
+        <p>Use uma senha única para cada conta, reduzindo a vulnerabilidade em caso de vazamento de dados.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
